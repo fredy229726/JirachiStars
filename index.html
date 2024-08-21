@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jirachi Stars</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                font-size: large;
+                margin: 0;
+                padding: 0;
+                background-image: url('https://wallpapers.com/images/high/pokemon-jirachi-blue-stripes-peguqnvgq3qoly0w.webp'); /* Fondo de pantalla */
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+                background-color: rgba(240, 240, 240, 0.8); /* Fondo con opacidad */
+                scroll-behavior: smooth; /* Desplazamiento suave */
+            }
+    
+            header {
+                background-color: rgba(193, 196, 27, 0.8); /* Encabezado con opacidad */
+                color: #000000;
+                padding: 2%;
+                text-align: center;
+                transition: background-color 0.3s ease; /* Transición de color */
+            }
+            
+            header:hover {
+                background-color: rgba(255, 254, 254, 0.845); /* Cambio de color al pasar el cursor */
+            }
+    
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            
+            nav ul li {
+                display: inline;
+                margin-right: 2%;
+                transition: transform 0.3s ease; /* Transición de transformación */
+            }
+            
+            nav ul li:hover {
+                transform: scale(1.1); /* Efecto de escala al pasar el cursor */
+            }
+            
+            nav ul li a {
+                color: #000000;
+                text-decoration: none;
+                transition: color 0.3s ease; /* Transición de color */
+            }
+            
+            nav ul li a:hover {
+                color: #ffd700; /* Cambio de color al pasar el cursor */
+            }
+    
+            .container{
+                display: flex;
+                width: 100%;
+                height: 100%;
+            }
+
+            .llave {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+  
+            .partido {
+                display: flex;
+                align-items: center;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+  
+            .logo-equipo {
+                flex: 1;
+                text-align: center;
+            }
+  
+            .logo-equipo img {
+                width: auto;/* Ajusta el tamaño máximo de los logos según sea necesario */
+                height: 200px;
+                object-fit: cover;
+            }
+  
+            .vs {
+                flex: 0 0 auto;
+                margin: 0 20px;
+            }
+  
+            .vs h2 {
+                font-size: 24px;
+                margin: 0;
+            }
+    
+            aside{
+                background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+                border-radius: 5px; /* Bordes redondeados */
+                padding: 10px; /* Relleno interno */
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+                margin-top: 20px; /* Margen superior */
+                width: 40%;
+                height: 100%;
+            }
+            
+            main {
+                padding: 2%;
+                width: 100%;
+                height: 100%;
+            }
+    
+            #video-container {
+                max-width: 800px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            video {
+                width: 100%;
+                height: auto;
+            }
+    
+            section {
+                margin-bottom: 3%;
+                background-color: rgba(255, 255, 255, 0.8); /* Sección con opacidad */
+                border-radius: 10px;
+                padding: 2%;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease; /* Transición de transformación */
+            }
+            
+            section:hover {
+                transform: translateY(-5px); /* Efecto de elevación al pasar el cursor */
+            }
+    
+            section h2 {
+                color: #333;
+                border-bottom: 2px solid #333;
+                padding-bottom: 1%;
+                margin-bottom: 2%;
+            }
+            
+            section p {
+                color: black;
+            }
+    
+            .container-carrusel {
+                width: 100%;
+                overflow: hidden;
+                margin-top: 20px;
+            }
+    
+            .carrusel {
+                display: flex;
+                transition: transform 0.5s ease;
+            }
+    
+            .carrusel-item {
+                flex: 0 0 auto;
+                width: 100%;
+                max-width: 100%;
+                margin-right: 20px;
+            }
+            
+            footer {
+                background-color: rgba(193, 196, 27, 0.8); /* Pie de página con opacidad */
+                color: #000000;
+                text-align: center;
+                padding: 1%;
+                bottom: 0;
+                width: 100%;
+            }
+    
+            footer:hover{
+                background-color: rgba(255, 254, 254, 0.845);
+            }
+    
+            footer a {
+                color: hsla(234, 77%, 42%, 0.849); /* Color del texto */
+                text-decoration: none; /* Quita el subrayado */
+                transition: color 0.3s ease; /* Transición de color */
+            }
+    
+            footer a:hover {
+                color: #ffd700; /* Cambio de color al pasar el cursor */
+            }
+            
+            /* Estilos para los iconos de contacto */
+            .contact-info i {
+                margin-right: 10px;
+            }
+
+            #logo {   
+                height: 120px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjkSaeKiMUihBLHxr4fCGzezSd75yQQM4uiaoHxix-bLbVsmQcHwPyZX8UF0BjEHRmabGNR2q84Ef5r9kYxU36zFGzwQMG8lefPUzC5VXZhHovQ7jqG-Q-IGY-6H4Sm-Qf_q1O-VmIUqTYqd_hPhxMyEHAQ_hXrAvZrnR43OIep5GGJGnuwARNlqDQnpsPV" alt="jirachi" id="logo">
+            <h1>Jirachi Stars</h1>
+            <nav>
+                <ul>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <main>
+              <section id="inicio">
+                <h2>Anecdotas de los Jirachis</h2>
+                <h3>Equipo Jirachi Stars</h3>
+                <div class="logo-equipo">
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjkSaeKiMUihBLHxr4fCGzezSd75yQQM4uiaoHxix-bLbVsmQcHwPyZX8UF0BjEHRmabGNR2q84Ef5r9kYxU36zFGzwQMG8lefPUzC5VXZhHovQ7jqG-Q-IGY-6H4Sm-Qf_q1O-VmIUqTYqd_hPhxMyEHAQ_hXrAvZrnR43OIep5GGJGnuwARNlqDQnpsPV" alt="jirachi" id="logo">
+                </div>
+                <h3>Integrantes antes del intercambio</h3>
+                <ul>
+                    <li>Diego Reyes Oroz</li>
+                    <li>Luis Ayala</li>
+                    <li>Victor Uria</li>
+                    <li>Luis D. Ramirez</li>
+                    <li>Alfredo Preza</li>
+                </ul>
+                <h3>Integrantes después del intercambio</h3>
+                <ul>
+                    <li>Diego Reyes Oroz</li>
+                    <li>Luis Ayala</li>
+                    <li>Victor Uria</li>
+                    <li>Luis D. Ramirez</li>
+                    <li>Alfredo Preza</li>
+                </ul>
+                <h2>Trayectoria</h2>
+                <h3>Combates Random por Liderazgo de Gremio</h3>
+                <p>Dos de los actuales integrantes estaban pasando de la primer ronda en los combates random. Diego venciendo a Gers, Victor venciendo a Luis D. Ramirez pero en la segunda ronda Jairo derroto a Victor y Diego derroto a Monrro dandole la oportunidad de ser lider del gremio.</p>
+                <p>Diego eligió Jirachi Stars porque le gusta el concepto de Jirachi, el color blanco y posee la bendición de la hax. Los compañero que eligió fueron Luis Ayala, Victor Uria, Luis D. Ramirez y Alfredo Preza.</p>
+                <h3>Eligiendo un Rol y un Inicial</h3>
+                <p>Dentro del chat del gremio se decidían los roles que escogeríamos. Al final terminamos con 2 magos que eran Victor y Alfredo, 2 guerreros que eran Luis Ayala y Luis D. Ramirez y 1 herrero que es Diego.</p>
+                <p>En el chat general elegiamos a nuestros iniciales de la aventura, Alfredo eligió a Popplio, Victor a eligió a Grookey, Diego eligió a Scorbunny, Luis Ayala eligió a Mudkip y Luis D. Ramires eligió a Chimchar.</p>
+                <h3>Rumbo a la aventura</h3>
+                <p>El gremio comenzó con varias capturas Pokémon en la Villa Herogate, una vez tuvimos suficientes Pokémon para formar un equipo participamos en nuestros primeros combates de entrenamiento a nivel 15, los resultados fueron los siguientes:</p>
+                <ul>
+                    <li>Diego venció a Kita</li>
+                    <li>Luis Ayala perdió contra Luis Enrique Monro</li>
+                    <li>Victor venció a Cristian</li>
+                    <li>Luis D. Ramirez venció a Mathias UP</li>
+                    <li>Alfredo venció a ROCOR</li>
+                </ul>
+                <p>Al finalizar se abrió la tienda y nos preparamos para la Gruta Desafio con muchos huevos y poke bolas para seguir avanzando con capturas y llegar al siguiente destino.</p>
+                <h3>Paramo Espejismo</h3>
+                <p>Hicimos un par de visitas al Paramo Espejismo para realizar capturas Pokémon y el Paramo cobro una victima de un gremio ajeno, al carrito (Gers) se le vacío el aceite y se quedo parado por lo que dicho gremio recibió un nuevo compañero, Bastian Perez (Esto influira en el futuro de Jirachi).</p>
+                <p>Recibimos nuestra primer misión "Caza de travesuras: atrapando a las bromitas", debiamos asustar a un grupo de traviesos Pokémon que jugaban bromas pesadas a los aldeanos, los combates fueron 6vs6 a nivel 20 y sin objetos, los resultados fueron los siguientes:</p>
+                <ul>
+                    <li>Diego venció a Miguel L</li>
+                    <li>Luis Ayala perdió contra Luis Fernando Pérez Puga</li>
+                    <li>Victor venció a Luis Fernando Pérez Puga</li>
+                    <li>Luis D. Ramirez perdió contra Miguel L</li>
+                    <li>Alfredo venció a Luis Fernando Pérez Puga</li>
+                </ul>
+                <p>Diego consigió un evento de Pokémon único que eran Zorua y Budew, Diego eligió a 3 participantes más para combatir por uno de los Pokémon único, los participantes fueron:</p>
+                <ul>
+                    <li>Diego Reyes Oroz</li>
+                    <li>Victor Uria</li>
+                    <li>Luis D. Ramirez</li>
+                    <li>Alfredo Preza</li>
+                </ul>
+                <p>Victor y Luis avanzaron al duelo final, el que ganaba elegía y el que perdía se quedaba con la sobra. Victor ganó y se quedó con zorua y Luis se quedó con budew.</p>
+                <h3>Teracristalización</h3>
+                <p>Llegaba un evento general a todos los gremios para liberar el tera de los Pokémon, sería un torneo contra NPC y se debía ganar al menos 10 combates para liberar el Tera primario de los Pokémon. Al final se logró liberar el Tera y los integrantes de Jirachi que aportaron victoria fueron Diego, Victor y Luis D. Ramirez.</p>
+                <h3>Ultimo entrenamiento</h3>
+                <p>Se aproximaba un torneo en Hightower y por eso se libraba un ultimo entrenamiento en el cual participó Diego y perdió.</p>
+                <h3>Comienza el Torneo en Hightower</h3>
+                <p>El torneo empezó bien para los Jirachi porque los 3 integrantes que jugaron la primer ronda pasaron, los resultados fueron los siguientes:</p>
+                <ul>
+                    <li>Luis Ayala venció a ROCOR</li>
+                    <li>Luis D. Ramirez venció a Adan</li>
+                    <li>Alfredo venció a NPC Yoc</li>
+                </ul>
+                <p>Todo era felicidad porque los 5 Jirachi estabamos en la ronda 2, ¿Qué podía salir mal?... En cuestión de un rato eliminaron a 4 de los 5 Jirachi, los resultados fueron los siguientes:</p>
+                <ul>
+                    <li>Diego venció a Bastian</li>
+                    <li>Luis Ayala perdió contra Octavio</li>
+                    <li>Victor perdió contra Monro</li>
+                    <li>Luis D. Ramirez perdió contra Angel M</li>
+                    <li>Alfredo perdió contra Alarcon</li>
+                </ul>
+                <p>Diego fue el único en pasar a la tercer ronda y se puso en modo jefe porque venció a Michael, con esa victoria paso a cuarta ronda en la cual venció a Daniel para llegar a la final contra Angel Zazueta y ganar la final, las recompensas lo valieron.</p>
+                <h3>Quizz por el 4to Pokémon Único</h3>
+                <p>Mientras Diego avanzaba en el torneo y a los demas los eliminaron se desarrollo un evento por el 4to poke único que era deino, un quizz dividido en 3 etapas, Ayala carreo al equipo en dicho Quizz y ganamos a pesar de que Celebis nos apretaba el marcador, los participantes que jugaron por el Deino fueron:</p>
+                <ul>
+                    <li>Diego Reyes Oroz</li>
+                    <li>Luis Ayala</li>
+                    <li>ROCOR</li>
+                    <li>Alfredo Preza</li>
+                </ul>
+                <p>Al final el juego por el deino lo ganó Ayala</p>
+                <h3>Caza de pokes en la niebla</h3>
+                <p>Mientras Ayala nos carreaba en el Quizz algo sucedio en la torre una niebla con pokes salvajes invadieron e interrumpieron el torneo, Diego participo en la caza pero perdió.</p>
+                <h3>El combate de los 8 magos</h3>
+                <p>Los protagonistas magos pudimos defender la ciudad de la niebla, contamos con la ayuda de un mago veterano que nos invito a combatir con conjuros de 'Cristal Revelado' como premio, lamentablemente los magos Victor y Alfredo de Jirachi perdieron ante Jairo y Monro respectivamente.</p>
+                <h3>Amistoso improvisado de fin de semana</h3>
+                <p>El torneo finalizaba pero nos enfrentaremos a un enemigo peligros y para ello practicamos con amigos, Luis D. Ramirez, Luis Ayala y Victor participaban en este amistoso, sus resultados fueron los siguientes:</p>
+                <ul>
+                    <li>Luis Ayala venció a Victor</li>
+                    <li>Luis D. Ramirez venció a Bastian</li>
+                </ul>
+                <h3>Combates de Intercambio</h3>
+                <p>De camino al cementerio de las almas errantes se daba apertura a los combates de intercambio, donde se finalizaria con un solo cambio entre 2 jugadores de distintos gremios, solo escribiré de los combates de jirachi y el combate final, los resultados de los primero combates fueron:</p>
+                <ul>
+                    <li>Luis D. Ramirez venció a Ayala, Luis decidió quedarse en Jirachi confiando en que Ayala ganaría por si solo</li>
+                    <li>Victor venció a Alfredo, Victor decidió quedarse en Jirachi</li>
+                </ul>
+                <p>Luis Ayala y Alfredo se deberían enfrentar en el siguiente duelo y definir quien se quedaba en Jirachi y quien en los combates, Ayala gano el combate y decidió continuar en los combates dejando a Alfredo en Jirachi.</p>
+                <p>Para estas instancias quedaba un integrante de cada gremio, Ayala se enfrento contra Gers (olvidé decirles que Gers revivió pero esto no tiene relevancia en Jirachi) y ganó Ayala por izzi con lo que decidió quedarse en Jirachi, seguiamos completos hasta el momento.</p>
+                <p>Bastian se quedaba en el duelo de intercambio en el otro combate por lo que se enfrentaría a Gers, como era combate entre diferente clase el que ganaba decidía con quien cambiar de cualquier gremio, el ganador fue Bastian y decidió cambiar el lugar con Luis D. Ramirez y apartir de ese momento es nuestro nuevo compañero.</p>
+                <h3>Cementerio de las almas errantes</h3>
+                <p>Mientras se realizaban los combates de intercambio llegamos al cementerio de las almas errantes donde ocurrió algo inesperado... ¡Nos convertimos en Pokémon!</p>
+                <ul>
+                    <li>Diego Reyes Oroz se convirtió en Crobat</li>
+                    <li>Luis Ayala se convirtió en Centiskorch</li>
+                    <li>Luis D. Ramirez se convirtió en Floatzel</li>
+                    <li>Alfredo Preza se convirtió en Shiftry</li>
+                </ul>
+                <p>El hechicero que genero caos en Hightower nos convirtío en Pokémon a excepción de 4 personas, 1 de cada gremio, así que Victor no fue convertido en Pokémon. Nuestros compañeros debían usarnos en combate mientras descubrían como romper la maldición y nosotros actuariamos como nuestros Pokémon, fue preocupante porque uno por uno iban perdiendo hasta que llego el turno de Numas que ganó y rompió la maldición después de 2 largos días.</p>
+                <p>No todo fue felicidad ya que durante el incidente se produjo un incendio por la mañana del día 2, algunos se quedaron dormidos y otros sofocaron el incendio y salvaron al anciano del cememterio. El viejo ya a salvo nos contó algo importante, no era la única amenaza, se refería a solo una parte del escuadrón de élite del Imperio... Los Bulgasari, la orden más poderosa del imperio. Su unidad de élite, conformada por seres inmortales. Su origen es incierto, pocos creen en su existencia, pero lo cierto es que se mueven entre las smbras.</p>
+                <h3>Capturas en el cementerio</h3>
+                <p>Por fin despues del caos y de los combates de intercambio llegaban las visitas para captura en el Cementerio de las almas errantes.</p>
+                <h3>Evento: Este fin de semana hay que entrenar</h3>
+                <p>Luego de conocer a Los Bulgasari se desarrollaron combates de entrenamiento al nivel 35 para estar al máximo y subir al nivel 40, participó Bastian, Victor y Ayala, siendo Victor y Ayala quienes ganaron su amistoso contra Jusealexis y Octavio respectivamente.</p>
+                <h3>Fiesta en los gremios</h3>
+                <p>El 15 de Agosto Bastian complió años y se realizó una ruleta especial.</p>
+                <h3>Subasta</h3>
+                <p>Se anunciaba y se realizaba una subasta con muchos objetos interesantes, fue una subasta muy movida, lo que pudimos obtener fue:</p>
+                <p>1 Factor Alola + 1 Factor Galar con 250 monedas</p>
+                <p>3 Parches habilidad con 860 monedas</p>
+                <p>Solo no pudimos conseguir el objeto que quería Ayala que era 1 Pack de Objetos de Clase Variados que se lo llevo Manaphy con 680 monedas</p>
+                <h3>Foso Cristalino</h3>
+                <p>Actualmente estamos en el Foso Cristalino, ya realizamos nuestras primeras capturas y actualmente tenemos 2 eventos activos para Jirachi "El recorrido que hemos hecho" en el cual estamos haciendo está redacción y "Los herreros tienen el poder" donde Diego esta participando.</p>
+                <p>Pronto continuaremos con nuestras aventuras.</p>
+              </section>
+            </main>
+        </div>
+        <footer>
+          <p>Unete al grupo en: <a href="https://www.facebook.com/share/maVUNCfV7ZzDuK6e/?mibextid=A7sQZp"><i class="fab fa-facebook"></i></a></p>
+        </footer>
+    </body>
+</html>
